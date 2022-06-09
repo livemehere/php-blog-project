@@ -42,6 +42,10 @@ body{
     border-radius: 20px;
 }
 
+.btn a{
+    color: white;
+}
+
 .btn:hover{
     background-color: var(--hover-bg);
 }

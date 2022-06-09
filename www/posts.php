@@ -25,15 +25,27 @@
         </div>
         <ul class="cards">
             <?php
-                for($i=0;$i<9;$i++){
-                    echo '
-                        <li class="card">
-                <h4 class="card__title">제목</h4>
-                <div class="card__tags">#해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그 #해시태그</div>
-                <img class="card__thumbnail" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/3c6a6974018100001.png?type=thumb&opt=C630x472" alt="thumbnail">
-            </li>
-                    ';
-                }
+            $servername = "localhost";
+            $user = "user1";
+            $password = "12345";
+            $database = 'sample';
+            $connect = mysqli_connect($servername, $user, $password,$database);
+
+            if (!$connect) {
+                die("서버와의 연결 실패! : " . mysqli_connect_error());
+            }
+            $query = "select * from posts";
+            $res = mysqli_query($connect, $query);
+            while ($row = mysqli_fetch_array($res)) {
+                echo '
+                    <li class="card">
+                        <h4 class="card__title">'.$row[2].'</h4>
+                        <div class="card__tags">'.$row[4].'</div>
+                        <img class="card__thumbnail" src="'.$row[5].'">
+                    </li>       
+                ';
+            }
+            mysqli_close($connect);
             ?>
         </ul>
     </section>

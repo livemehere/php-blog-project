@@ -17,7 +17,7 @@ create table posts(
     PRIMARY KEY(id)
 );
 
-INSERT INTO sample.posts VALUES(1,99,'제목이에요','내용이에요','#태그#아니#그 래','https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/3c6a6974018100001.png?type=thumb&opt=C630x472',DEFAULT,DEFAULT);
+INSERT INTO sample.posts VALUES(DEFAULT,99,'PHP에 대해서','php에 대한 글입니다','#php#ssr#굿','https://www.miltonmarketing.com/wp-content/uploads/2018/04/customphplogo.png',DEFAULT,DEFAULT);
 
 ```
 
