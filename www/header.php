@@ -5,15 +5,19 @@
         <li class="btn">Skills</li>
         <li class="btn">Channel</li>
         <li class="btn">Projects</li>
-        <li class="btn">Posts</li>
+        <li class="btn"><a href="/www/posts.php">Posts</a></li>
     </ul>
     <div class="icons">
         <i class="fa-solid fa-magnifying-glass btn search-btn"></i>
         <i class="fa-solid fa-moon btn dark-btn"></i>
-        <i class="fa-solid fa-sun btn light-btn"></i>
+        <i class="fa-regular fa-sun btn light-btn"></i>
     </div>
     <i class="fa-solid fa-bars hamberger-btn"></i>
 </header>
+<div class="title">
+    <h1>FE Developer</h1>
+    <h2>공태민</h2>
+</div>
 <div class="search-wrap">
     <label>
         <i class="fa-solid fa-magnifying-glass btn "></i>

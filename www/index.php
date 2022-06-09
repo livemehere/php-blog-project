@@ -13,9 +13,8 @@
 </head>
 <body>
     <?php include 'header.php'?>
-    <div class="title">
-        <h1>FE Developer</h1>
-        <h2>공태민</h2>
-    </div>
+    <section>
+
+    </section>
 </body>
 </html>

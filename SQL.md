@@ -1,36 +1,23 @@
-# members
+# DB 구조
+
+## SQL
+
+### posts
 
 ```sql
-create table members
-(
-    num        int      not null AUTO_INCREMENT,
-    id         char(15) not null,
-    pass       char(15) not null,
-    name       char(10) not null,
-    email      char(80),
-    regist_day char(20),
-    level      int,
-    point      int,
-    primary key (num)
+create table posts(
+	id INT AUTO_INCREMENT NOT NULL,
+    userid INT NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    tags VARCHAR(255),
+    thumbnail_url VARCHAR(255),
+    created_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
 );
 
-create table board (
-   num int not null auto_increment,
-   id char(15) not null,
-   name char(10) not null,
-   subject char(200) not null,
-   content text not null,
-   regist_day char(20) not null,
-   hit int not null,
-   file_name char(40),
-   file_type char(40),
-   file_copied char(40),
-   primary key(num)
-);
+INSERT INTO sample.posts VALUES(1,99,'제목이에요','내용이에요','#태그#아니#그 래','https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/3c6a6974018100001.png?type=thumb&opt=C630x472',DEFAULT,DEFAULT);
+
 ```
 
-## insert into 
-
-```sql
-insert into members values(default, 'test', '1234', '공태민', 'kong@naver.com','2022-05-26', 0, 0);
-```
