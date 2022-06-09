@@ -1,20 +1,22 @@
 :root{
     --background:#fff;
     --text-color:black;
-    --hover-bg:rgba(0,0,0,0.1);
-
+    --hover-bg:#EEEEEE;
 }
 
 :root[color-theme='dark']{
-    --background:#333;
+    --background:#000000;
     --text-color:#fff;
-    --hover-bg:rgba(255,255,255,0.1);
-
+    --hover-bg:#222225;
 }
 
 *{
     background-color: var(--background);
     color: var(--text-color);
+}
+
+a{
+    text-decoration: none;
 }
 
 body{
@@ -56,11 +58,59 @@ header{
 
 .menu li {
     margin: 0 .2em;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    line-height: normal;
 }
 
 .icons i{
     margin: 0 .5em;
     font-size: 1.3rem;
+}
+
+.hamberger-btn{
+    display: none;
+}
+
+
+@media screen and (max-width : 768px) {
+    header{
+        display: block;
+        position: relative;
+    }
+    .logo{
+        text-align: center;
+    }
+    .menu{
+        margin-top: 1.5em;
+        text-align: center;
+        display: none;
+
+    }
+    .menu li{
+        padding: 1em 0;
+        border-radius: 0;
+    }
+
+    .icons{
+        text-align: center;
+        margin-top: 1.5em;
+        display: none;
+    }
+
+    .menu.show{
+        display: block;
+    }
+    .icons.show{
+        display: block;
+    }
+
+    .hamberger-btn{
+        display: block;
+        position: absolute;
+        font-size: 1.7rem;
+        top: .9em;
+        right: 1em;
+        cursor: pointer;
+    }
 }
