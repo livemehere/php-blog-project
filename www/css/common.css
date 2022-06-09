@@ -72,6 +72,44 @@ header{
     display: none;
 }
 
+.search-wrap{
+    padding-top: 1em;
+    background-color: var(--background);
+    position:absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.search-wrap label{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid var(--hover-bg);
+    padding: .5em;
+    margin: .5em 1em;
+}
+
+.search-wrap i{
+
+}
+
+.search-wrap input{
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1.3rem;
+}
+
+.search-close-btn{
+    font-size: 1.3rem;
+    align-self: center;
+    padding-right: .3em;
+    cursor: pointer;
+}
 
 @media screen and (max-width : 768px) {
     header{

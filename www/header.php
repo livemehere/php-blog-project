@@ -8,17 +8,27 @@
         <li class="btn">Posts</li>
     </ul>
     <div class="icons">
-        <i class="fa-solid fa-magnifying-glass btn"></i>
+        <i class="fa-solid fa-magnifying-glass btn search-btn"></i>
         <i class="fa-solid fa-moon btn dark-btn"></i>
         <i class="fa-solid fa-sun btn light-btn"></i>
     </div>
     <i class="fa-solid fa-bars hamberger-btn"></i>
 </header>
+<div class="search-wrap">
+    <label>
+        <i class="fa-solid fa-magnifying-glass btn "></i>
+        <input type="text"/>
+        <i class="fa-solid fa-xmark search-close-btn"></i>
+    </label>
+</div>
 
 <script>
     const darkBtn = document.querySelector('.dark-btn');
     const lightBtn = document.querySelector('.light-btn');
     const hambergerBtn = document.querySelector('.hamberger-btn');
+    const searchBtn = document.querySelector('.search-btn');
+    const searchWrap = document.querySelector('.search-wrap');
+    const searchCloseBtn = document.querySelector('.search-close-btn');
     const menu = document.querySelector('.menu');
     const icons = document.querySelector('.icons');
     loadColorMode();
@@ -58,5 +68,13 @@
     hambergerBtn.addEventListener('click',()=>{
         menu.classList.toggle('show');
         icons.classList.toggle('show');
+    })
+
+    searchBtn.addEventListener('click',()=>{
+        searchWrap.style.display='block';
+    })
+
+    searchCloseBtn.addEventListener('click',()=>{
+        searchWrap.style.display='none';
     })
 </script>
