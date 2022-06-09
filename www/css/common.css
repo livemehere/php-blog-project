@@ -111,7 +111,6 @@ header .btn:hover{
 }
 
 .search-wrap i{
-
 }
 
 .search-wrap input{
@@ -132,10 +131,23 @@ header .btn:hover{
 @media screen and (max-width : 768px) {
     header{
         display: block;
-        position: relative;
+        background-color: var(--background);
     }
+
+    header .btn{
+        color: var(--text-color);
+    }
+
+    .btn:hover{
+        background-color: var(--background);
+        color: var(--background);
+    }
+
     .logo{
         text-align: center;
+    }
+    .logo a{
+        color: var(--text-color);
     }
     .menu{
         margin-top: 1.5em;
@@ -156,9 +168,11 @@ header .btn:hover{
 
     .menu.show{
         display: block;
+
     }
     .icons.show{
         display: block;
+
     }
 
     .hamberger-btn{
