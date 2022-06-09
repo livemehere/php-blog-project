@@ -1,0 +1,66 @@
+:root{
+    --background:#fff;
+    --text-color:black;
+    --hover-bg:rgba(0,0,0,0.1);
+
+}
+
+:root[color-theme='dark']{
+    --background:#333;
+    --text-color:#fff;
+    --hover-bg:rgba(255,255,255,0.1);
+
+}
+
+*{
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+body{
+}
+/* 공통 */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn{
+    cursor: pointer;
+    padding: .3em .5em;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background-color: var(--hover-bg);
+}
+
+/* 헤더 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1.5em 0 ;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 .2em;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.icons i{
+    margin: 0 .5em;
+    font-size: 1.3rem;
+}
