@@ -4,6 +4,7 @@
 .tags h1{
     font-size: 2rem;
     font-weight: bold;
+
 }
 
 .tags ul{
@@ -62,4 +63,13 @@
     width: 100%;
     display: block;
     border-radius: 0 0 14px 14px;
+}
+
+@media screen and (max-width: 748px) {
+    .tags h1{
+        text-align: center;
+    }
+    .tags ul{
+        justify-content: center;
+    }
 }
