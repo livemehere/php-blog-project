@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>공태민의 블로그</title>
 </head>
 <body>
-    <div class="container">
-        <?php include 'header.php'?>
-
+    <?php include 'header.php'?>
+    <div class="title">
+        <h1>FE Developer</h1>
+        <h2>공태민</h2>
     </div>
 </body>
 </html>

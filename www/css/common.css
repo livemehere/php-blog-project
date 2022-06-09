@@ -13,7 +13,7 @@
 }
 
 *{
-    background-color: var(--background);
+
     color: var(--text-color);
 }
 
@@ -23,7 +23,7 @@ a{
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
-
+    background-color: var(--background);
 }
 /* 공통 */
 .container{
@@ -46,13 +46,24 @@ header{
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 1.5em 0 ;
+    padding: 1.5em 2em ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header .btn:hover{
+    background-color: #222225;
 }
 
 .logo{
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+}
+.logo a{
+    color: white ;
 }
 
 .menu{
@@ -65,11 +76,13 @@ header{
     font-size: 1.1rem;
     font-weight: 600;
     line-height: normal;
+    color: white;
 }
 
 .icons i{
     margin: 0 .5em;
     font-size: 1.3rem;
+    color: white ;
 }
 
 .hamberger-btn{
@@ -106,6 +119,7 @@ header{
     outline: none;
     flex: 1;
     font-size: 1.3rem;
+    background: transparent;
 }
 
 .search-close-btn{
