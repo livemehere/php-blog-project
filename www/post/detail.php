@@ -48,7 +48,7 @@
                 <p class="col2">
                 <?php
                 echo '<span><a class="post-btn" href="delete.php?num='.$row["id"].'">삭제</a></span>';
-                echo '<span><a class="post-btn" href="NoticeModifyForm.php?num='.$row["id"].'">수정하기</a></span>';
+                echo '<span><a class="post-btn" href="postmodifyForm.php?num='.$row["id"].'">수정하기</a></span>';
                 ?>
                 </p>
             </li>
