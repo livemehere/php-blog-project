@@ -12,6 +12,7 @@ create table posts(
     content TEXT NOT NULL,
     tags VARCHAR(255),
     thumbnail_url VARCHAR(255),
+    view INT DEFAULT 0,
     created_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)

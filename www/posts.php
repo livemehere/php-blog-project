@@ -38,9 +38,11 @@
             while ($row = mysqli_fetch_array($res)) {
                 echo '
                     <li class="card">
+                    <a href="/www/post/detail.php?num='.$row[0].'">
                         <h4 class="card__title">'.$row[2].'</h4>
                         <div class="card__tags">'.$row[4].'</div>
                         <img class="card__thumbnail" src="'.$row[5].'">
+                    </a>
                     </li>       
                 ';
             }
