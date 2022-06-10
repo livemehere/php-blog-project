@@ -1,16 +1,27 @@
 <header>
     <h1 class="logo"><a href="/www">Kong'Blog</a></h1>
     <ul class="menu">
-        <li class="btn">About me</li>
-        <li class="btn">Skills</li>
-        <li class="btn">Channel</li>
-        <li class="btn">Projects</li>
         <li class="btn"><a href="/www/posts.php">Posts</a></li>
+        <?php
+        session_start();
+        if(isset($_SESSION["username"])){
+            echo  '<li class="btn"><a href="/www/post/write.php">작성하기</a></li>';
+        }
+        ?>
     </ul>
     <div class="icons">
         <i class="fa-solid fa-magnifying-glass btn search-btn"></i>
         <i class="fa-solid fa-moon btn dark-btn"></i>
         <i class="fa-regular fa-sun btn light-btn"></i>
+        <?php
+        if(isset($_SESSION["username"])){
+            echo  '<span class="btn">'.$_SESSION["username"].'님</span>
+                    <span><a href="/www/login/logout.php" class="btn">Logout</a></span>
+                            ';
+        }else{
+            echo '<a href="/www/login/login.php" class="btn">LOGIN</a>';
+        }
+        ?>
     </div>
     <i class="fa-solid fa-bars hamberger-btn"></i>
 </header>

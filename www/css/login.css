@@ -1,0 +1,31 @@
+.login-title{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1em 0;
+    font-weight: bold;
+}
+
+form input{
+    width: 100%;
+    padding: 1em;
+    background: var(--hover-bg);
+    outline: none;
+    margin-bottom: .5em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.login-btn{
+    flex:1;
+    background: var(--hover-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    background-color: var(--hover-dark-bg);
+    color: var(--background);
+}
