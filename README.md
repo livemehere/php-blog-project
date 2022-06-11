@@ -23,25 +23,6 @@ http://localhost:41062/www/index.php
 http://localhost:41062/phpmyadmin/
 ```
 
-## SQL
-
-```sql
-
--- user
-CREATE USER 'user1' IDENTIFIED BY '12345';
-GRANT ALL PRIVILEGES ON *.* TO 'user1'@'%';
-FLUSH PRIVILEGES;
-
--- member table
-CREATE TABLE (
-    id INT AUTO_INCREMENT NOT NULL,
-    name VARCHAR(50) NOT NULL,
-    password VARCHAR(10) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-```
-
 ## restart xamp
 
 ```bash
