@@ -1,5 +1,6 @@
 #view_content{
-    width: 100%;
+    margin: 1em 2em;
+
 }
 
 #view_content li{
@@ -20,7 +21,6 @@
 }
 
 .content-box{
-    margin-top: 1em;
 }
 .post-btn{
     margin-left: .3em;
@@ -32,6 +32,86 @@
 .post-btn:hover{
     background-color: var(--hover-dark-bg);
 }
+
+.comment-title{
+    margin: 0 0 1.5em 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+ }
+
+.comment-wrap{
+    margin: 2em 0;
+    border-top : 1px solid var(--text-color);
+    padding-top: 2em;
+}
+
+.comment-wrap input{
+    width: 100%;
+    padding: .5em;
+    background: var(--hover-bg);
+    outline: none;
+    margin-bottom: .5em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.comment-wrap  textarea{
+    width: 100%;
+    height: 100px;
+    padding: 1em;
+    background: var(--hover-bg);
+    outline: none;
+    margin-bottom: .5em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.comment-wrap .row{
+    width: 100%;
+    gap: 1em;
+    display: flex;
+}
+
+.comment-wrap .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.comment-wrap .buttons button{
+    flex:1;
+    padding: .5em 0;
+    background: var(--hover-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-wrap .buttons button:hover{
+    background-color: var(--hover-dark-bg);
+    color: var(--background);
+}
+
+.comments li{
+    background-color: var(--hover-bg);
+    margin-bottom: 1em;
+    padding: 1em .5em;
+    border-radius: 5px;
+}
+
+ .user-info{
+    display: flex;
+    gap: 1em;
+     margin-bottom: 1em;
+}
+ .name{
+     font-weight: bold;
+ }
+
+ .date{
+     color:var(--hover-dark-bg)
+ }
 
 @media screen and (max-width: 768px) {
     #view_content{

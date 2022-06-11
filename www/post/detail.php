@@ -64,7 +64,51 @@
             <li class="content-box">
                 <?=$content?>
             </li>
+            <div class="comment-wrap">
+                <h2 class="comment-title">댓글</h2>
+                    <ul class="comments">
+                        <?php
+                        $sql = "select * from comment where post_id=$num";
+                        $result = mysqli_query($con, $sql);
+
+                        while ($row = mysqli_fetch_array($result)) {
+                            $content = $row['content'];
+                            $content = str_replace(" ", "&nbsp;", $content);
+                            $content = str_replace("\n", "<br>", $content);
+                            echo '
+                            <li>
+                                <div class="user-info">
+                                    <div class="name">'.$row['username'].'</div><div class="date">'.$row['created_date'].' 작성</div>
+                                </div>
+                                <p style="line-height:1.5em">'.$content.'</p>
+                            </li>     
+                        ';
+                        }
+                        mysqli_close($con);
+                        ?>
+                 </ul>
+
+
+                <form action="createComment.php?id=<?=$num?>" method="post">
+                    <div class="row">
+                        <input type="text" name="username" placeholder="이름">
+                        <input type="password" name="password" placeholder="비밀번호">
+                    </div>
+                    <div class="row">
+                        <textarea type="text" name="content"></textarea>
+                    </div>
+                    <div class="row buttons">
+                        <button>댓글등록</button>
+                    </div>
+                </form>
+            </div>
         </ul>
 </section>
+<script>
+    window.scrollTo({
+        top:document.documentElement.scrollHeight,
+        behavior:'smooth'
+    })
+</script>
 </body>
 </html>

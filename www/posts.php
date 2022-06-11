@@ -70,7 +70,7 @@
             li.addEventListener('click',()=>{
                 document.querySelectorAll('.tag').forEach(e=> e.classList.remove('active'));
                 li.classList.add('active');
-                updateFilterTagList(tag)트
+                updateFilterTagList(tag);
             })
             li.innerText = tag;
             tagList.appendChild(li)
