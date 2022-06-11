@@ -17,8 +17,8 @@
 <section>
     <h1 class="login-title">LOGIN</h1>
     <form action="handleLogin.php" method="post" id="login_form">
-        <input type="text" name="id">
-        <input type="password" name="passwd" id="">
+        <input type="text" name="id" placeholder="아이디">
+        <input type="password" name="passwd" id="" placeholder="비밀번호">
         <input class="login-btn" type="submit" value="로그인">
     </form>
 </section>

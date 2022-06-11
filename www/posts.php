@@ -17,7 +17,7 @@
         <div class="tags">
             <h1>해시태그</h1>
             <ul class="tag-list">
-                <li class="all">전체</li>
+                <li class="all tag active">전체</li>
 <!--                여기에 존재하는 모든 태그가 계산됩니다-->
             </ul>
         </div>
@@ -63,6 +63,9 @@
             tags = tags.filter(item=> item !== '' && item !== '\b');
             finalTags.push(...tags);
         })
+
+        finalTags = Array.from(new Set(finalTags)); // 중복된 태그 제거
+
         // 추출한 태그들로 버튼들 생성
         finalTags.forEach(tag=> {
             const li = document.createElement('li');
@@ -97,6 +100,9 @@
                 const li = document.createElement('li');
                 li.innerHTML =c.innerHTML;
                 li.classList.add('card')
+                li.classList.add('tag')
+                document.querySelectorAll('.tag').forEach(e=> e.classList.remove('active'));
+                allBtn.classList.add('active');
                 cardBox.append(li)
             })
         })
