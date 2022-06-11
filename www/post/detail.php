@@ -43,12 +43,21 @@
             <li>
                 <p class="col1"><?=$title?></p>
                 <p class="col2">작성자 : 공태민</p>
-                <p class="col2"><?=$created_date?> 작성</p>
+                <?php
+                    if($created_date == $updated_date){
+                        echo '<p class="col2">'.$created_date.' 작성</p>';
+                    }else{
+                        echo '<p class="col2">'.$updated_date.' 수정됨</p>';
+                    }
+                ?>
+
                 <p class="col2">조회수 : <?=$new_view?></p>
                 <p class="col2">
                 <?php
-                echo '<span><a class="post-btn" href="delete.php?num='.$row["id"].'">삭제</a></span>';
-                echo '<span><a class="post-btn" href="postmodifyForm.php?num='.$row["id"].'">수정하기</a></span>';
+                if(isset($_SESSION['userid'])){
+                    echo '<span><a class="post-btn" href="delete.php?num='.$row["id"].'">삭제</a></span>';
+                    echo '<span><a class="post-btn" href="postmodifyForm.php?num='.$row["id"].'">수정하기</a></span>';
+                }
                 ?>
                 </p>
             </li>

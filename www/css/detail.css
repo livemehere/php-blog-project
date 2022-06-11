@@ -32,3 +32,9 @@
 .post-btn:hover{
     background-color: var(--hover-dark-bg);
 }
+
+@media screen and (max-width: 768px) {
+    #view_content{
+        padding: .5em 1em;
+    }
+}

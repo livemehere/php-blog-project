@@ -39,7 +39,7 @@ $thumbnail_url  = $row["thumbnail_url"];
                 <textarea  name="content" placeholder="내용"><?=$content?></textarea>
             </li>
             <li>
-                <span class="col1"> 썸네일</span>
+                <div class="col1 thumb-title"> 썸네일</div>
                 <img id="preivew" src="<?=$thumbnail_url?>" alt="">
             </li>
         </ul>

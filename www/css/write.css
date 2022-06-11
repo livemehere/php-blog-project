@@ -56,3 +56,13 @@ form textarea{
     background-color: var(--hover-dark-bg);
     color: var(--background);
 }
+
+.thumb-title{
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 768px) {
+    section{
+        padding: .5em 1em;
+    }
+}

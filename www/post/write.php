@@ -27,7 +27,7 @@
                     <textarea name="content" placeholder="내용"></textarea>
             </li>
             <li>
-                <span class="col1"> 썸네일</span>
+                <div class="col1 thumb-title"> 썸네일</div>
                 <input id="imageInput" required type="file" name="imgFile" accept="image/*" onChange="onChangeImage(this)">
                 <img id="preivew" src="" alt="">
             </li>

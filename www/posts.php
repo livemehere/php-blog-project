@@ -16,10 +16,9 @@
     <section>
         <div class="tags">
             <h1>해시태그</h1>
-            <ul>
-                <li>태그1</li>
-                <li>태그2</li>
-                <li>태그3</li>
+            <ul class="tag-list">
+                <li class="all">전체</li>
+<!--                여기에 존재하는 모든 태그가 계산됩니다-->
             </ul>
         </div>
         <ul class="cards">
@@ -50,5 +49,58 @@
             ?>
         </ul>
     </section>
+    <script>
+        const allTags = document.querySelectorAll('.card__tags');
+        const tagList = document.querySelector('.tag-list');
+        const cardBox = document.querySelector('.cards');
+        const allCards = document.querySelectorAll('.card');
+        const allBtn = document.querySelector('.all');
+        let finalTags = []; // 모든 태그를 담은 배열
+
+        // 태그 추출
+        allTags.forEach(element=>{
+            let tags = element.innerHTML.split('#');
+            tags = tags.filter(item=> item !== '' && item !== '\b');
+            finalTags.push(...tags);
+        })
+        // 추출한 태그들로 버튼들 생성
+        finalTags.forEach(tag=> {
+            const li = document.createElement('li');
+            li.classList.add('tag')
+            li.addEventListener('click',()=>{
+                document.querySelectorAll('.tag').forEach(e=> e.classList.remove('active'));
+                li.classList.add('active');
+                updateFilterTagList(tag)트
+            })
+            li.innerText = tag;
+            tagList.appendChild(li)
+        })
+
+        // 누른 태그를 포함한 게시글만 보이도록 필터링
+        function updateFilterTagList(tag){
+            cardBox.innerHTML = '';
+            allCards.forEach(c=> {
+                const tags = c.querySelector('.card__tags').innerHTML;
+                const regRxp = new RegExp(tag);
+                if(!regRxp.test(tags)) return;
+                const li = document.createElement('li');
+                li.innerHTML =c.innerHTML;
+                li.classList.add('card')
+                cardBox.append(li)
+            })
+        }
+
+        // 전체 보기 버튼
+        allBtn.addEventListener('click',()=>{
+            cardBox.innerHTML = '';
+            allCards.forEach(c=> {
+                const li = document.createElement('li');
+                li.innerHTML =c.innerHTML;
+                li.classList.add('card')
+                cardBox.append(li)
+            })
+        })
+
+    </script>
 </body>
 </html>

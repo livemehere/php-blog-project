@@ -17,13 +17,20 @@
     font-weight: 500;
     background: var(--card-bg);
     padding: .5em 1em;
+    min-width: fit-content;
     border-radius: 20px;
     cursor: pointer;
     transition: 250ms;
 }
 
-.tags ul li:hover{
-    transform: translateY(-3px);
+.tag-list{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+.tag-list::-webkit-scrollbar{
+    display: none;
 }
 
 .cards{
@@ -68,11 +75,14 @@
     border-radius: 0 0 14px 14px;
 }
 
+.active {
+    background-color: var(--text-color) !important;
+    color: var(--hover-bg);
+}
+
 @media screen and (max-width: 748px) {
     .tags h1{
         text-align: center;
     }
-    .tags ul{
-        justify-content: center;
-    }
+
 }
