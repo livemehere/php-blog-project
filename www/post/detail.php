@@ -88,7 +88,6 @@
                         ?>
                  </ul>
 
-
                 <form action="createComment.php?id=<?=$num?>" method="post">
                     <div class="row">
                         <input type="text" name="username" placeholder="이름">
@@ -105,10 +104,7 @@
         </ul>
 </section>
 <script>
-    window.scrollTo({
-        top:document.documentElement.scrollHeight,
-        behavior:'smooth'
-    })
+    document.querySelector('.content-box').scrollIntoView({behavior:'smooth'})
 </script>
 </body>
 </html>
