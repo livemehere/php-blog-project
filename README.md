@@ -4,6 +4,7 @@
 - 로그인하지 않은 사용자는 게시글 조회, 댓글 달기 가능
 - 해시태그 수집 및 필터링 기능
 - 게시글 작성시 썸네일과 함께 업로드
+- 모바일 반응형
 
 ## 화면
 
@@ -13,6 +14,10 @@
 <img width="1286" alt="image" src="https://user-images.githubusercontent.com/61547778/173171279-dfc73606-0cd3-4b99-9d01-833bfeeb5f59.png">
 <img width="1277" alt="image" src="https://user-images.githubusercontent.com/61547778/173171339-629f89af-5f66-4c55-8505-27aa00e5b088.png">
 
+<div style="display:flex;">
+<img src="https://user-images.githubusercontent.com/61547778/173171536-9fc85fb5-10d4-4b49-8681-48a137d87b10.png" width="300">
+<img src="https://user-images.githubusercontent.com/61547778/173171555-94abd3fb-ae53-4647-a29c-36744f3997f7.png" width="300">
+</div>
 
 ## PHP-APACHE 실습환경
 
